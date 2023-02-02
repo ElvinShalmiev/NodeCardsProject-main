@@ -20,7 +20,7 @@ Content-Type: application/json
     "name": "Pizza Dominos",
     "description": "Best Pizza in some place",
     "address": "some place",
-    "phone": "0505050502",
+    "phone": "050-5050502",
     "image":"http://abc.com/image.png",
     "bizNumber":1233123123
 }

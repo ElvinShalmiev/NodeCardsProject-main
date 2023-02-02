@@ -4,17 +4,11 @@ const router = Router();
 import joi from "joi";
 import { cardSchema } from "../validators/cards.js";
 import { urlRegex, phoneRegex } from "../validators/utils.js"
+import _ from "underscore";
 
 //add cards to db:
 router.post("/", (req, res) => {
-  const body = {
-    name: req.body.name,
-    description: req.body.description,
-    address: req.body.address,
-    bizNumber: req.body.bizNumber,
-    image: req.body.image,
-    phone: req.body.phone,
-  };
+  const body =_.pick(req.body,"name","description","address","bizNumber","image","phone")
   
   //[{message:"", path:""}]=>[message:""]
   const validationResult = cardSchema.validate(body);
