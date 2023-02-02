@@ -1,0 +1,43 @@
+###GET Home page
+
+GET http://localhost:3001/home
+
+
+###GET login page
+
+GET http://localhost:3001/api/login
+
+
+###
+GET http://localhost:3001/api/books/fantasy
+
+
+### POST to add a card:
+POST http://localhost:3001/api/cards
+Content-Type: application/json
+
+{
+    "name": "Pizza Dominos",
+    "description": "Best Pizza in some place",
+    "address": "some place",
+    "phone": "0505050502",
+    "image":"http://abc.com/image.png",
+    "bizNumber":1233123123
+}
+
+### GET all cards
+GET http://localhost:3001/api/cards
+
+
+### GET all students:
+GET http://localhost:3001/api/students
+
+###POST to add a student:
+POST http://localhost:3001/api/students
+Content-Type: application/json
+
+{
+    "firstName":"Bruce", 
+    "lastName":"Wayne",
+    "email":"Batman@Batcave.com"
+}
