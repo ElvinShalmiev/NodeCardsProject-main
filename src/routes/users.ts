@@ -12,7 +12,7 @@ const router = Router();
 router.post("/signup", validateSignUp, userAlreadyExists, async (req, res) => {
   const body = _.pick(req.body, "username", "email", "password");
 
-  body.password=await bcrypt.hash(body.password,20)
+  body.password=await bcrypt.hash(body.password,12)
 
   try {
     const user = await new User(body).save();
