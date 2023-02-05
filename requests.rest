@@ -42,12 +42,22 @@ Content-Type: application/json
     "email":"Batman@Batcave.com"
 }
 
-###POST to add user:
+###POST to add user signup:
 POST http://localhost:3001/api/auth/signup
 Content-Type: application/json
 
 {
     "username":"Bruce", 
+    "email":"Batman@Batcave.com",
+    "password":"tomerBu@123!g"
+}
+
+###POST to signin user:
+POST http://localhost:3001/api/auth/signin
+Content-Type: application/json
+
+{
+   
     "email":"Batman@Batcave.com",
     "password":"tomerBu@123!g"
 }
