@@ -4,11 +4,15 @@ import { User } from "../db/models/user.js";
 import { validateSignUp } from "../middleware/verifySignupBody.js";
 import { userAlreadyExists } from "../middleware/userAlreadyExists.js";
 
+import bcrypt from 'bcryptjs'
+
 const router = Router();
 
 //api/auth/signup
 router.post("/signup", validateSignUp, userAlreadyExists, async (req, res) => {
   const body = _.pick(req.body, "username", "email", "password");
+
+  body.password=await bcrypt.hash(body.password,20)
 
   try {
     const user = await new User(body).save();
