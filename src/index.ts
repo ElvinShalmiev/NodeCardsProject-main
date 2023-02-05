@@ -8,6 +8,7 @@ import { booksRouter } from "./routes/books.js";
 import { cardsRouter } from "./routes/cards.js";
 import { studentsRouter } from "./routes/students.js";
 import cors from "cors";
+import { authRouter } from "./routes/users.js";
 
 const app = express();
 
@@ -16,14 +17,6 @@ const app = express();
 
 app.use(cors({origin:'http://localhost:3000'}))
 
-
-/* app.use((req,res,next)=>{
-  res.setHeader("Access-Control-Allow-Origin","*");
-   res.setHeader(
-    "Access-Control-Allow-Headers",
-    "Content-Type,x-requested-with");
-    next();
-}) */
 
 app.use(express.json());
 app.use(morgan("dev"));
@@ -36,6 +29,7 @@ connect().catch((e) => {
 app.use("/api/books", booksRouter);
 app.use("/api/cards", cardsRouter);
 app.use("/api/students",studentsRouter)
+app.use("/api/auth", authRouter);
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //404:
