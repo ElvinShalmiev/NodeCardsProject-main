@@ -47,9 +47,9 @@ POST http://localhost:3001/api/auth/signup
 Content-Type: application/json
 
 {
-    "username":"Bruce", 
-    "email":"Batman@Batcave.com",
-    "password":"tomerBu@123!g"
+    "username":"tomerBu", 
+    "email":"tomerBu@Batcave.com",
+    "password":"tomerBu@6663!g"
 }
 
 ###POST to sign in user:
