@@ -15,9 +15,7 @@ const app = express();
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //middlewares:
 
-app.use(cors({origin:'http://localhost:3000'}))
-
-
+app.use(cors({origin:'http://localhost:3000',allowedHeaders:["Content-Type","Autorization"]}))
 app.use(express.json());
 app.use(morgan("dev"));
 
