@@ -7,15 +7,20 @@ GET http://localhost:3001/home
 
 GET http://localhost:3001/api/login
 
+###GET
+GET http://localhost:3001/api/books/all
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZTFmZTk5YzJhYjJjMTE0ZGU4NDVjNiIsImlhdCI6MTY3NTc3NTU4OSwiZXhwIjoxNjc4MzY3NTg5fQ.5YYosXjeStD1R5zFqr7JORMlT3Zl02imQTHrL9SqFpw
+
 
 ###
 GET http://localhost:3001/api/books/fantasy
 
 
+
 ### POST to add a card:
 POST http://localhost:3001/api/cards
 Content-Type: application/json
-
+Authorization: YOUR_JWT_TOKEN
 {
     "name": "Pizza Dominos",
     "description": "Best Pizza in some place",
@@ -45,6 +50,7 @@ Content-Type: application/json
 ###POST to add user signup:
 POST http://localhost:3001/api/auth/signup
 Content-Type: application/json
+Authorization: YOUR_JWT_TOKEN
 
 {
     "username":"tomerBu", 
@@ -61,3 +67,5 @@ Content-Type: application/json
     "email":"Batman@Batcave.com",
     "password":"tomerBu@123!g"
 }
+
+
