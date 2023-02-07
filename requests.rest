@@ -52,7 +52,7 @@ Content-Type: application/json
     "password":"tomerBu@123!g"
 }
 
-###POST to signin user:
+###POST to sign in user:
 POST http://localhost:3001/api/auth/signin
 Content-Type: application/json
 
